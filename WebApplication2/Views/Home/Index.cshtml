@@ -1,0 +1,97 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>OpenCV</h1>
+    <p class="lead">
+        OpenCV (Open Source Computer Vision Library) is an open source computer vision and machine learning software library. 
+        This web site is a test site for me.
+    </p>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Canny Filter</h2>
+        <p>
+            Canny Filter.
+            Selecting the image file and push submit button.
+            You can see the result of canny filter.
+        </p>
+        @using (Html.BeginForm("Canny", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+        {
+            <input type="file" name="imageData" accept="image/*" /><br />
+    <input type="submit" value="Execute" />
+        }
+    </div>
+    <div class="col-md-4">
+        <h2>Detect Face and Eye</h2>
+        <p>
+            Detect Face and Eye.
+            Selecting the image file and push submit button.
+            You can see the result of Detect Face and Eye.
+        </p>
+        @using (Html.BeginForm("DetectFace", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+        {
+            <input type="file" name="imageData" accept="image/*" /><br />
+            <input type="submit" value="Execute" />
+        }
+    </div>
+    <div class="col-md-4">
+        <h2>Detect Human</h2>
+        <p>
+            Detect Human.
+            Selecting the image file and push submit button.
+            You can see the result of Detect Human.</p>
+        @using (Html.BeginForm("DetectHuman", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+        {
+            <input type="file" name="imageData" accept="image/*" /><br />
+            <input type="submit" value="Execute" />
+        }
+    </div>
+</div>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <h2>Hough Transform</h2>
+        <p></p>
+        @using (Html.BeginForm("HoughTransform", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+        {
+            <input type="file" name="imageData" accept="image/*" /><br />
+            <input type="submit" value="Execute" />
+        }
+    </div>
+    <div class="col-md-4">
+        <h2>Histgram</h2>
+        <p></p>
+        @using (Html.BeginForm("Histgram", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+        {
+            <input type="file" name="imageData" accept="image/*" /><br />
+            <input type="submit" value="Execute" />
+        }
+    </div>
+    <div class="col-md-4">
+        <h2>Template Matching</h2>
+        <p>TemplateMatching</p>
+        @using (Html.BeginForm("MatchTemplate", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+        {
+            <input type="file" id="image" name="imageData" accept="image/*" /><br />
+            <input type="file" id="template" name="templateData" accept="image/*" /><br />
+            <input type="submit" value="Execute" />
+        }
+    </div>
+</div>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <h2>Fourier Transform</h2>
+        <p></p>
+        @using (Html.BeginForm("FourierTransform", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+        {
+            <input type="file" name="imageData" accept="image/*" /><br />
+            <input type="submit" value="Execute" />
+        }
+    </div>
+</div>
+
